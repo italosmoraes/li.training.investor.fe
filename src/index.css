@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#loan-view-title {
+  text-align: left;
+  margin-left: 15px;
+}
+
+.loans-view {
+  border: 2px solid  #555555;
+  border-radius: 25px;
+}
+
+.loan-card {
+  background-color: #d1caca;
+  max-width: 500px;
+  padding: 10px 10px 10px 10px;
+  margin-left: 15px;
+}
+
+.loan-title {
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.loan-details {
+  text-align: left;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.is-invested-text {
+  text-align: right;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-left: 5px;
+  color:rgb(98, 199, 106);
+}
+
+.btn-invest button {
+  width:100px;
+  height: 30px;
+  align-self: left;
+}
+
+.invest-view {
+  background-color: #e4dcaf;
+  max-width: 300px;
+  padding: 10px 10px 10px 10px;
+  margin-left: 15px;
+  text-align: left;
+}
+
+.invest-amount-box {
+  width: 100%;
+}
+
+#invest-amount-input {
+  width: 150px;
+  height: 30px;
+}
+
+#invest-btn {
+  margin-right: 10px;
+}

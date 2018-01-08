@@ -70,3 +70,7 @@ body {
 #invest-btn {
   margin-right: 10px;
 }
+
+.invest-error {
+  color: red;
+}

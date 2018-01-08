@@ -25,7 +25,9 @@ class LoanCard extends Component {
         this.fakeData = '{"loans": [{"id": "1","title": "Voluptate et sed tempora qui quisquam.","tranche": "A","available": "11959","annualised_return": "8.60","term_remaining": "864000","ltv": "48.80","amount": "85,754"}]}';
         this.json = JSON.parse(this.fakeData);
         this.state = {showInvestModal: false};
-        this.InvestView = <InvestView title={this.json.loans[0].title} available={this.json.loans[0].available} term={this.json.loans[0].term_remaining} />;
+        this.showInvestView = this.showInvestModal.bind(this);
+        this.InvestView = <InvestView id={this.json.loans[0].id} title={this.json.loans[0].title} available={this.json.loans[0].available} term={this.json.loans[0].term_remaining} showInvestView={this.showInvestView} handleInvestAction={this.handleInvestAction} />;
+        this.handleInvestAction = this.handleInvestAction.bind(this);
     }
 
     componentDidMount(){
@@ -33,6 +35,14 @@ class LoanCard extends Component {
 
     showInvestModal(){
         this.setState({showInvestModal: !this.state.showInvestModal});
+    }
+
+    handleInvestAction(loanId, investmentAmount){
+        console.log('invest '+investmentAmount+' in loan ' + loanId);
+        //find the loan in the fake dataset
+        //update amount available
+        //show 'user is invested' visual aid
+
     }
     
     render(){
@@ -43,13 +53,10 @@ class LoanCard extends Component {
                 <div class="is-invested-text">//show if user is invested</div>
                 <div class="btn-invest"><button onClick={() => this.showInvestModal()}> Invest </button> </div>
                 {this.state.showInvestModal && this.InvestView}
-               
             </div>
         )
     }
 }
-
-
 
 export default LoanCard;
 

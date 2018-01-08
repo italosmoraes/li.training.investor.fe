@@ -1,26 +1,47 @@
 import React, {Component} from 'react';
 
+const InvestError = (
+    <div class="invest-error"> Amount has to be greater than 0.00  </div>
+);
+    
+
+
 class InvestView extends Component {
 
     constructor(props){
         super(props);
+        this.loanId = props.id;
         this.title = props.title;
         this.available = Number(props.available);
-        this.term = new Date(Number(props.term));
+        this.term = (new Date(2018,12,1)).toString();
         this.validateAndInvest = this.validateAndInvest.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.state = {amountValue: '0.00'};
-    }
 
-    validateAndInvest(){
-        console.log('validate and invest');
-        if(this.state.amountValue < this.available){
-            console.log('good');
-        }else{
-            console.log('bad');
-        }
+        this.showInvestView = this.showInvestView.bind(this);
         
     }
+
+    showInvestView(){
+        this.props.showInvestView();
+    }
+
+    /**
+     * validate if the value is < amount available
+     * then returns the Amount and the Loan ID to the parent component, for further handling of invest actions
+     */
+    validateAndInvest(){
+        console.log('validate and invest');
+        if(this.state.amountValue < this.available & this.state.amountValue > 0){
+            console.log('good');
+            this.props.handleInvestAction( this.loanId, this.state.amountValue);
+        }else{
+            console.log('bad');
+            {InvestError}
+        }
+    }
+
+    
 
     handleChange(evt){
         this.setState({amountValue: evt.target.value});
@@ -36,13 +57,14 @@ class InvestView extends Component {
                 <div class="invest-view-details">
                 <ul>
                     <li> Amount Available: {this.available} </li>
-                    <li> Loan ends in: {this.term.getUTCDate.toString()} </li>
+                    <li> Loan ends in: {this.term} </li>
                 </ul>
                 </div>
                 <div class="invest-amount-box">
                     <div> Investment amount (£) </div>
                     <div ><input id="invest-amount-input" type="number" name="amount" value={this.state.amountValue} onChange={this.handleChange}/> 
                     <span><button id="invest-btn" onClick={this.validateAndInvest}> Invest </button> </span>
+                    <div><button id="invest-btn" onClick={this.showInvestView}> Cancel </button> </div>
                     </div>
                     
                 </div>

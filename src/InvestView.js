@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
+import getFloat from './CurrencyHandler';
 
 const InvestError = (
     <div class="invest-error"> Amount has to be greater than 0.00  </div>
 );
     
-
-
 class InvestView extends Component {
 
     constructor(props){
         super(props);
         this.loanId = props.id;
         this.title = props.title;
-        this.available = Number(props.available);
+        this.available = props.available; // when should I transform the text to currency to make the calculations?
         this.term = (new Date(2018,12,1)).toString();
         this.validateAndInvest = this.validateAndInvest.bind(this);
         this.handleChange = this.handleChange.bind(this);
@@ -35,6 +34,7 @@ class InvestView extends Component {
         if(this.state.amountValue < this.available & this.state.amountValue > 0){
             console.log('good');
             this.props.handleInvestAction( this.loanId, this.state.amountValue);
+            this.showInvestView();
         }else{
             console.log('bad');
             {InvestError}

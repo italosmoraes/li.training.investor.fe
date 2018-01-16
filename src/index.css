@@ -18,7 +18,11 @@ body {
   background-color: #d1caca;
   max-width: 500px;
   padding: 10px 10px 10px 10px;
-  margin-left: 15px;
+  margin: 15px 15px 15px 15px ;
+}
+
+.loan-card p {
+  text-align: left;
 }
 
 .loan-title {

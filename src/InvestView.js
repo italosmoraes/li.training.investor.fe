@@ -15,14 +15,22 @@ class InvestView extends Component {
         this.term = (new Date(2018,12,1)).toString();
         this.validateAndInvest = this.validateAndInvest.bind(this);
         this.handleChange = this.handleChange.bind(this);
-        this.state = {amountValue: '0.00'};
+        this.state = {amountValue: '0'};
 
         this.showInvestView = this.showInvestView.bind(this);
+
+        this.updateLoan = this.updateLoan.bind(this);
         
     }
 
     showInvestView(){
         this.props.showInvestView();
+    }
+
+    updateLoan(amountToSub){
+
+        this.props.updateLoan(amountToSub);
+
     }
 
     /**
@@ -33,7 +41,9 @@ class InvestView extends Component {
         console.log('validate and invest');
         if(this.state.amountValue < this.available & this.state.amountValue > 0){
             console.log('good');
-            this.props.handleInvestAction( this.loanId, this.state.amountValue);
+            // this.props.handleInvestAction(this.loanId, this.state.amountValue);
+            // this.props.updateLoan(this.available);
+            this.updateLoan(this.state.amountValue);
             this.showInvestView();
         }else{
             console.log('bad');

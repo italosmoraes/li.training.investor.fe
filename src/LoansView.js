@@ -11,8 +11,6 @@ class LoansView extends Component {
         this.loans = loansList.loans;
     }
 
-    
-
     render(){
 
         let loans = this.loans.map(loan => 

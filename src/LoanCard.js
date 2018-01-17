@@ -1,34 +1,32 @@
 import React, { Component } from 'react';
 import LoanDetailsBox from './LoanDetailsBox';
 import InvestView from './InvestView';
-// import styles from './invest.css';
-
 
 class LoanCard extends Component {
 
     constructor(props){
         super(props);
-        // this.fakeData = '{"loans": [{"id": "1","title": "Voluptate et sed tempora qui quisquam.","tranche": "A","available": "11959","annualised_return": "8.60","term_remaining": "864000","ltv": "48.80","amount": "85,754"}]}';
-        // this.json = JSON.parse(this.fakeData);
-        this.state = {showInvestModal: false};
+    
+        this.state = {showInvestModal: false, available: this.props.loan.available};
         
         this.showInvestView = this.showInvestModal.bind(this);
-        // this.InvestView = <InvestView id={this.json.loans[0].id} title={this.json.loans[0].title} available={this.json.loans[0].available} term={this.json.loans[0].term_remaining} showInvestView={this.showInvestView} handleInvestAction={this.handleInvestAction} />;
         
-        this.InvestView = <InvestView id={this.props.loan.id} title={this.props.loan.title} available={this.props.loan.available} term={this.props.loan.term_remaining} showInvestView={this.showInvestView} handleInvestAction={this.handleInvestAction} />;
-        
+        this.InvestView = <InvestView id={this.props.loan.id} title={this.props.loan.title} available={this.state.available} term={this.props.loan.term_remaining} showInvestView={this.showInvestView} handleInvestAction={this.handleInvestAction} updateLoan={this.updateLoan}/>;
+        // this.InvestView = <InvestView id={this.props.loan.id} title={this.props.loan.title} available={this.props.loan.available} term={this.props.loan.term_remaining} showInvestView={this.showInvestView} handleInvestAction={this.handleInvestAction} />;
         this.handleInvestAction = this.handleInvestAction.bind(this);
 
-        this.availableInitial = this.props.loan.available;
+        this.updateLoan = this.updateLoan.bind(this);
 
     }
 
     componentDidMount(){
-
+        
     }
 
-    updateLoan(){
-        console.log('updating loan' + this.props.loan.id);   
+    updateLoan(newAmtAvailable){
+        
+        console.log('updated loan amount -> ' + newAmtAvailable);
+
     }
 
     showInvestModal(){
@@ -38,9 +36,10 @@ class LoanCard extends Component {
     handleInvestAction(loanId, investmentAmount){
         console.log('invest '+ investmentAmount +' in loan ' + loanId);
         //convert amount avaible into currency value - no need until it is actuall time to render() - to be handled by parent component
-        
+
+
         //find the loan in the fake dataset - or not, since this is talking direct to the child Invest Modal
-        this.updateLoan();
+    
         //update amount available in the loansList "local storage representation" - to be done by parent
 
         //show 'user is invested' visual aid - this should hold the state, but the parent component should propagate this downwards - telling what this component will show

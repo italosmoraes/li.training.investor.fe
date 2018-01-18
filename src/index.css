@@ -54,12 +54,20 @@ body {
   align-self: left;
 }
 
+.invest-view-background {
+  background-color: #b6b2b2;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
 .invest-view {
   background-color: #e4dcaf;
   max-width: 300px;
   padding: 10px 10px 10px 10px;
   margin-left: 15px;
   text-align: left;
+  position: absolute;
 }
 
 .invest-amount-box {

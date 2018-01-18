@@ -1,6 +1,8 @@
 // this represents only the initial loading from the DB
 // I need to find a way to similate a local DB
 // which will hold the values, and be updated on the Invest() action
+// -> convert this json array into a JS Object will can be accessed constantly
+// -> or not! try and just update this loansList back with the new "available" value
 
 const loansList = {
     "loans": [

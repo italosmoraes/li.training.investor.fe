@@ -28,14 +28,14 @@
 
 // };
 
-function Loan(id, title, tranche, amount, rate, term_remain, ltv, available){
-    this.showDetails = function(){console.log(this.title)};
-    this.id = id;
-    this.title = title;
-    this.tranche = tranche;
-    this.totalLoanAmount = amount;
-    this.annualised_return = rate;
-    this.term_remaining = term_remain;
-    this.ltv = ltv;
-    this.available = available;
-}
+// function Loan(id, title, tranche, amount, rate, term_remain, ltv, available){
+//     this.showDetails = function(){console.log(this.title)};
+//     this.id = id;
+//     this.title = title;
+//     this.tranche = tranche;
+//     this.totalLoanAmount = amount;
+//     this.annualised_return = rate;
+//     this.term_remaining = term_remain;
+//     this.ltv = ltv;
+//     this.available = available;
+// }

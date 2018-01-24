@@ -1,0 +1,319 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoansView LoanView is rendered renders the loans view 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LoansView />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          id="loan-view-title"
+        >
+           Current Loans 
+        </h2>,
+        Array [
+          <LoanCard
+            loan={
+              Object {
+                "amount": "85,754",
+                "annualised_return": "8.60",
+                "available": 11959,
+                "expiration_date": 2017-06-23T04:41:20.000Z,
+                "id": "1",
+                "ltv": "48.80",
+                "term_remaining": "864000",
+                "title": "Voluptate et sed tempora qui quisquam.",
+                "tranche": "A",
+              }
+            }
+            updateAvailableAmount={[Function]}
+          />,
+          <LoanCard
+            loan={
+              Object {
+                "amount": "85,754",
+                "annualised_return": "7.10",
+                "available": 31405,
+                "expiration_date": 2017-07-01T22:41:20.000Z,
+                "id": "5",
+                "ltv": "48.80",
+                "term_remaining": "1620000",
+                "title": "Consectetur ipsam qui magnam minus dolore ut fugit.",
+                "tranche": "B",
+              }
+            }
+            updateAvailableAmount={[Function]}
+          />,
+          <LoanCard
+            loan={
+              Object {
+                "amount": "85,754",
+                "annualised_return": "4.80",
+                "available": 12359,
+                "expiration_date": 2017-06-23T08:51:20.000Z,
+                "id": "12",
+                "ltv": "48.80",
+                "term_remaining": "879000",
+                "title": "Dolores repudiandae ut voluptas unde laborum quaerat et sapiente.",
+                "tranche": "C",
+              }
+            }
+            updateAvailableAmount={[Function]}
+          />,
+        ],
+      ],
+      "class": "loans-view",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": " Current Loans ",
+          "id": "loan-view-title",
+        },
+        "ref": null,
+        "rendered": " Current Loans ",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "class",
+        "props": Object {
+          "loan": Object {
+            "amount": "85,754",
+            "annualised_return": "8.60",
+            "available": 11959,
+            "expiration_date": 2017-06-23T04:41:20.000Z,
+            "id": "1",
+            "ltv": "48.80",
+            "term_remaining": "864000",
+            "title": "Voluptate et sed tempora qui quisquam.",
+            "tranche": "A",
+          },
+          "updateAvailableAmount": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "5",
+        "nodeType": "class",
+        "props": Object {
+          "loan": Object {
+            "amount": "85,754",
+            "annualised_return": "7.10",
+            "available": 31405,
+            "expiration_date": 2017-07-01T22:41:20.000Z,
+            "id": "5",
+            "ltv": "48.80",
+            "term_remaining": "1620000",
+            "title": "Consectetur ipsam qui magnam minus dolore ut fugit.",
+            "tranche": "B",
+          },
+          "updateAvailableAmount": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "12",
+        "nodeType": "class",
+        "props": Object {
+          "loan": Object {
+            "amount": "85,754",
+            "annualised_return": "4.80",
+            "available": 12359,
+            "expiration_date": 2017-06-23T08:51:20.000Z,
+            "id": "12",
+            "ltv": "48.80",
+            "term_remaining": "879000",
+            "title": "Dolores repudiandae ut voluptas unde laborum quaerat et sapiente.",
+            "tranche": "C",
+          },
+          "updateAvailableAmount": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            id="loan-view-title"
+          >
+             Current Loans 
+          </h2>,
+          Array [
+            <LoanCard
+              loan={
+                Object {
+                  "amount": "85,754",
+                  "annualised_return": "8.60",
+                  "available": 11959,
+                  "expiration_date": 2017-06-23T04:41:20.000Z,
+                  "id": "1",
+                  "ltv": "48.80",
+                  "term_remaining": "864000",
+                  "title": "Voluptate et sed tempora qui quisquam.",
+                  "tranche": "A",
+                }
+              }
+              updateAvailableAmount={[Function]}
+            />,
+            <LoanCard
+              loan={
+                Object {
+                  "amount": "85,754",
+                  "annualised_return": "7.10",
+                  "available": 31405,
+                  "expiration_date": 2017-07-01T22:41:20.000Z,
+                  "id": "5",
+                  "ltv": "48.80",
+                  "term_remaining": "1620000",
+                  "title": "Consectetur ipsam qui magnam minus dolore ut fugit.",
+                  "tranche": "B",
+                }
+              }
+              updateAvailableAmount={[Function]}
+            />,
+            <LoanCard
+              loan={
+                Object {
+                  "amount": "85,754",
+                  "annualised_return": "4.80",
+                  "available": 12359,
+                  "expiration_date": 2017-06-23T08:51:20.000Z,
+                  "id": "12",
+                  "ltv": "48.80",
+                  "term_remaining": "879000",
+                  "title": "Dolores repudiandae ut voluptas unde laborum quaerat et sapiente.",
+                  "tranche": "C",
+                }
+              }
+              updateAvailableAmount={[Function]}
+            />,
+          ],
+        ],
+        "class": "loans-view",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": " Current Loans ",
+            "id": "loan-view-title",
+          },
+          "ref": null,
+          "rendered": " Current Loans ",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "class",
+          "props": Object {
+            "loan": Object {
+              "amount": "85,754",
+              "annualised_return": "8.60",
+              "available": 11959,
+              "expiration_date": 2017-06-23T04:41:20.000Z,
+              "id": "1",
+              "ltv": "48.80",
+              "term_remaining": "864000",
+              "title": "Voluptate et sed tempora qui quisquam.",
+              "tranche": "A",
+            },
+            "updateAvailableAmount": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "5",
+          "nodeType": "class",
+          "props": Object {
+            "loan": Object {
+              "amount": "85,754",
+              "annualised_return": "7.10",
+              "available": 31405,
+              "expiration_date": 2017-07-01T22:41:20.000Z,
+              "id": "5",
+              "ltv": "48.80",
+              "term_remaining": "1620000",
+              "title": "Consectetur ipsam qui magnam minus dolore ut fugit.",
+              "tranche": "B",
+            },
+            "updateAvailableAmount": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "12",
+          "nodeType": "class",
+          "props": Object {
+            "loan": Object {
+              "amount": "85,754",
+              "annualised_return": "4.80",
+              "available": 12359,
+              "expiration_date": 2017-06-23T08:51:20.000Z,
+              "id": "12",
+              "ltv": "48.80",
+              "term_remaining": "879000",
+              "title": "Dolores repudiandae ut voluptas unde laborum quaerat et sapiente.",
+              "tranche": "C",
+            },
+            "updateAvailableAmount": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

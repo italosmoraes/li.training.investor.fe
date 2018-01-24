@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import LoanCard from './LoanCard';
 import InvestView from './InvestView';
-// import loadLoans from './DataStub';
 import loansList from './LoansList';
 
 class LoansView extends Component {
@@ -35,7 +34,6 @@ class LoansView extends Component {
     
 
     render(){
-
         let loans = this.state.loans.map(loan => 
             <LoanCard 
                 key={loan.id} 

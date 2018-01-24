@@ -36,10 +36,10 @@ class InvestView extends Component {
     render(){
         let validationError = this.validate();
         return(
-            <div class=".invest-view-background">
+            <div class="invest-view-background">
             <div class="invest-view">
                 <div class="invest-view-header">
-                <h3> Invest in loan</h3>
+                <h3>Invest in loan</h3>
                 <p> Loan Title: {this.props.title} </p>
                 </div>
                 <div class="invest-view-details">
@@ -58,7 +58,6 @@ class InvestView extends Component {
                             value={this.state.amountValue} 
                             onChange={this.handleChange}
                         /> 
-                        {validationError}
                         <span>
                             <button id="invest-btn"> Invest </button> 
                         </span>

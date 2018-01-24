@@ -24,6 +24,7 @@ class LoanCard extends Component {
         return(
             <div class="loan-card">
                 <h2 class="loan-title">Title: {this.props.loan.title}</h2>
+                
                 <p>Tranche: {this.props.loan.tranche} </p>
                 <p>Term Remaining: {formatDate(this.props.loan.expiration_date)} </p>
                 <p>LTV: {this.props.loan.ltv} </p>
@@ -32,7 +33,7 @@ class LoanCard extends Component {
                 <p>Amount Available: {formatCurrency(this.props.loan.available)} </p>
 
                 <div class="is-invested-text">//show if user is invested</div>
-                <div class="btn-invest"><button onClick={this.toggleInvestModal}> Invest </button> </div>
+                <div class="btn-invest"><button id='toggle-invest' onClick={this.toggleInvestModal}> Invest </button> </div>
 
                 {this.state.showInvestModal && (
                     <InvestView 
@@ -51,14 +52,3 @@ class LoanCard extends Component {
 }
 
 export default LoanCard;
-
-/**
-//load loans
-//mount Loan card - maybe I dont need the Loan class, since I can simply load the data from wherever and create the visual representation
-what does this mean for how I handle Loan changes in regards to investment in the front end?
-since I will change Loan properties 
-and will change View details in regards to Loan
-I need a Loan obj representation
-// show loan details
-// show if user is invested in this loan
-*/
